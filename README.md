@@ -1,36 +1,93 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# LiveKit Voice Agent Embed App
 
-## Getting Started
+A lightweight **voice AI agent embed widget** built with **Next.js 15 (App Router)** and powered by **[LiveKit](https://livekit.io/)**.  
+Designed for easy integration into any website via a simple `<iframe>` — no video, just high-quality audio interaction.
 
-First, run the development server:
+---
+
+## ✨ Features
+
+- 🎤 **One-Click Voice Chat** – Start or end a voice conversation instantly.
+- 🔊 **Audio-Only** – Minimal interface, no video, optimized for voice-first use cases.
+- 🎨 **Modern Gradient UI** – Animated, interactive, and mobile-friendly.
+- 🔄 **Auto Room & User IDs** – Each session uses a random room name to avoid reconnection issues.
+- 📦 **Embed Anywhere** – Integrates into any site via an `<iframe>`.
+
+---
+
+## 🚀 How It Works
+
+1. **Frontend** – A Next.js 15 (App Router) app serves the voice agent widget.
+2. **Backend** – `/api/token` endpoint generates LiveKit access tokens using your API key/secret.
+3. **LiveKit Server** – Handles real-time audio streaming between the user and the AI agent.
+4. **Embed Mode** – Widget is placed inside an `<iframe>` for easy integration.
+
+---
+
+## 🛠️ Setup
+
+### 1. Clone the Repository
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/yourusername/livekit-voice-agent-embed.git
+cd livekit-voice-agent-embed
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 2. Install Dependencies
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+pnpm install
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 3. Configure Environment Variables
 
-## Learn More
+Create a .env.local file:
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+NEXT_PUBLIC_LIVEKIT_URL=
+LIVEKIT_API_KEY=
+LIVEKIT_API_SECRET=
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 4. Run Locally
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
 
-## Deploy on Vercel
+pnpm run dev
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🌐 Embedding the Widget
+
+Once deployed, you can embed the voice agent on any website using:
+
+```html
+<iframe
+  src="https://your-deployment-url/embed"
+  style="width: 200px; height: 200px; border: none; background: transparent;"
+></iframe>
+```
+
+## 🧠 Powered By
+
+- Next.js 15 (App Router)
+
+- LiveKit – Real-time audio infrastructure
+
+- Framer Motion – UI animations
+
+- Vercel – Hosting
+
+## 📄 License
+
+MIT License
+
+## 💡 Use Cases
+
+- Website AI assistants
+
+- Voice-based customer support
+
+- Audio-only interview bots
+
+- Interactive marketing widgets
